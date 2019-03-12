@@ -38,3 +38,62 @@
 * 제자리(in-place) 정렬
 입력 데이터를 저장하는 공간 이외에 추가적인 저장공간을 상수 개만 필요로 하는 정렬 방식
 입력 크기 n이 증가함에도 불구하고 추가적인 저장공간은 증가하지 않음.
+
+
+* 버블, 선택, 삽입, 쉘 정렬을 비교해보았다.
+$ python BubbleSort.py
+Input : H E L L O W O R L D
+Step1 : E H L L O O R L D W
+Step2 : E H L L O O L D R W
+Step3 : E H L L O L D O R W
+Step4 : E H L L L D O O R W
+Step5 : E H L L D L O O R W
+Step6 : E H L D L L O O R W
+Step7 : E H D L L L O O R W
+Step8 : E D H L L L O O R W
+Step9 : D E H L L L O O R W
+total time : 3.4720776081085205 millisec
+
+$ python SelectionSort.py
+Input : H E L L O W O R L D
+Step1 : D E L L O W O R L H
+Step2 : D E L L O W O R L H
+Step3 : D E H L O W O R L L
+Step4 : D E H L O W O R L L
+Step5 : D E H L L W O R O L
+Step6 : D E H L L L O R O W
+Step7 : D E H L L L O R O W
+Step8 : D E H L L L O O R W
+Step9 : D E H L L L O O R W
+total time : 3.150067090988159 millisec
+
+$ python InsertSort.py
+Input : H E L L O W O R L D
+Step2 : E H L L O W O R L D
+Step3 : E H L L O W O R L D
+Step4 : E H L L O W O R L D
+Step5 : E H L L O W O R L D
+Step6 : E H L L O W O R L D
+Step7 : E H L L O O W R L D
+Step8 : E H L L O O R W L D
+Step9 : E H L L L O O R W D
+Step10 : D E H L L L O O R W
+total time : 3.0931222438812256 millisec
+
+$ python ShellSort.py
+Input : H E L L O W O R L D
+Step1 : H E L L D W O R L O
+Step2 : H E D L L W O R L O
+Step3 : H E D L L W L R O O
+Step4 : H E D L L R L W O O
+Step5 : H E D L L R L O O W
+Step6 : H E D L L O L R O W
+Step7 : E H D L L O L R O W
+Step8 : E D H L L O L R O W
+Step9 : D E H L L O L R O W
+Step10 : D E H L L L O R O W
+Step11 : D E H L L L O O R W
+total time : 3.058487892150879 millisec
+
+H E L L O W O R L D로 실행해본 결과
+버블 < 선택 < 삽입 < 쉘 정렬 순으로 성능이 좋았다. ^^

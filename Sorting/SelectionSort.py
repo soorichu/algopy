@@ -3,6 +3,9 @@
 #총비교횟수 n(n-1)/2, 시간복잡도 O(n^2)
 #제자리 정렬, 안정적이지 않은 정렬
 
+#시간 재기
+import time
+start_time = time.time()
 #데이터를 입력 받음. space로 구분
 #입력 예시 (예1) H E L L O  (예2) 10 23 4 9 012 3
 st = input("Input : ")
@@ -32,3 +35,5 @@ for i in range(len(s)-1):
 	s[i], s[Min] = s[Min], s[i]
 	printArr(s, i+1)  #정렬된 배열 출력
 #################################################
+#시간 출력
+print("total time :", time.time()-start_time, "millisec")
