@@ -43,31 +43,29 @@
 
 
 버블, 선택, 삽입, 쉘 정렬을 비교해보았다.
-$ python BubbleSort.py
-Input : H E L L O W O R L D
-Step1 : E H L L O O R L D W
-Step2 : E H L L O O L D R W
-Step3 : E H L L O L D O R W
-Step4 : E H L L L D O O R W
-Step5 : E H L L D L O O R W
-Step6 : E H L D L L O O R W
-Step7 : E H D L L L O O R W
-Step8 : E D H L L L O O R W
-Step9 : D E H L L L O O R W
-total time : 3.4720776081085205 millisec
-
 $ python SelectionSort.py
-Input : H E L L O W O R L D
-Step1 : D E L L O W O R L H
-Step2 : D E L L O W O R L H
-Step3 : D E H L O W O R L L
-Step4 : D E H L O W O R L L
-Step5 : D E H L L W O R O L
-Step6 : D E H L L L O R O W
-Step7 : D E H L L L O R O W
-Step8 : D E H L L L O O R W
-Step9 : D E H L L L O O R W
-total time : 3.150067090988159 millisec
+Input : 8 31 48 73 3 65 20 29 11 15
+Step1 : 8 31 48 15 3 65 20 29 11 73
+Step2 : 8 31 48 15 3 11 20 29 65 73
+Step3 : 8 31 29 15 3 11 20 48 65 73
+Step4 : 8 20 29 15 3 11 31 48 65 73
+Step5 : 8 20 11 15 3 29 31 48 65 73
+Step6 : 8 3 11 15 20 29 31 48 65 73
+Step7 : 8 3 11 15 20 29 31 48 65 73
+Step8 : 8 3 11 15 20 29 31 48 65 73
+Step9 : 3 8 11 15 20 29 31 48 65 73
+
+$ python BubbleSort.py
+Input : 3 31 48 73 8 11 20 29 65 15
+Step1 : 3 31 48 8 11 20 29 65 15 73
+Step2 : 3 31 8 11 20 29 48 15 65 73
+Step3 : 3 8 11 20 29 31 15 48 65 73
+Step4 : 3 8 11 20 29 15 31 48 65 73
+Step5 : 3 8 11 20 15 29 31 48 65 73
+Step6 : 3 8 11 15 20 29 31 48 65 73
+Step7 : 3 8 11 15 20 29 31 48 65 73
+Step8 : 3 8 11 15 20 29 31 48 65 73
+Step9 : 3 8 11 15 20 29 31 48 65 73
 
 $ python InsertSort.py
 Input : H E L L O W O R L D
