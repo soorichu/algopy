@@ -1,5 +1,5 @@
 def strToArr(st):
-	s = st.split(" ")   # 데이터를 배열로 만듦
+	s = st.lower().split(" ")   # 데이터를 배열로 만듦
 	i = 0
 	while i < len(s):
 		if s[i]=="": del s[i]  # 공백 원소 삭제

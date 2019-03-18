@@ -13,36 +13,33 @@ start_time = time.time()
 #입력 받은 string을 array로 바꿈
 s = strToArr.strToArr(st)
 
-sp = type(s[0]) == type('a')
-#s = [7, 5, 9, 8, 4, 5, 7, 5]
-if sp: 
-	sl = s 
-#	print("sl", sl)
-	s = [ord(st) for st in s]
+def CountingSort(A, n):
+	oldA = A[0]
+	if type(oldA) == type('a'):	
+		A = [ord(a) for a in A]
+	Min = Max = A[0]
 
-n = len(s)
-Min = Max = s[0]
+	for i in range(n):
+		if A[i]<Min: Min = A[i]
+		if A[i]>Max: Max = A[i]
 
-for i in range(n):
-	if s[i]<Min: Min = s[i]
-	if s[i]>Max: Max = s[i]
+	count = [0 for i in range(Max+1)]
 
-count = [0 for i in range(Max+1)]
+	for i in A: count[i] += 1
+		
+	# 출현 횟수 누적값 계산
+	for i in range(Min+1, Max+1): 
+		count[i] = count[i]+count[i-1]
 
-for i in s: count[i] += 1
-	
-#print(count)
-# 출현 횟수 누적값 계산
-for i in range(Min+1, Max+1): 
-	count[i] = count[i]+count[i-1]
+	B = [0 for i in range(n)]
+	for i in range(n-1, -1, -1):
+		B[count[A[i]]-1] = A[i]
+		count[A[i]] -= 1
 
-#print(count)
+	if type(B[0])!=type(oldA): B = [chr(b) for b in B]
+	printArr.printArr(B)
 
-r = [0 for i in range(n)]
-for i in range(n-1, -1, -1):
-	r[count[s[i]]-1] = s[i]
-	count[s[i]] -= 1
+CountingSort(s, len(s))
+#시간 출력
+print("total time :", time.time()-start_time, "millisec")
 
-if sp: r = [chr(rt) for rt in r]
-
-printArr.printArr(r)
