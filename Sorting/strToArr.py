@@ -6,4 +6,14 @@ def strToArr(st):
 		else:
 			if s[i].isdecimal() : s[i] = int(s[i]) #숫자인 경우 int로 바꾸어 넣어 주기
 			i += 1
+	
+	if type(s[0]) == type('a'):
+		temp = []
+		for si in s:
+			if len(si) > 1: temp.extend([i for i in si])
+			else: temp.append(si)
+		s = temp
+
 	return s
+
+#print(strToArr("hello world"))

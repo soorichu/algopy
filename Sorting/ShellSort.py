@@ -9,12 +9,12 @@ import time
 import printArr
 import strToArr
 
-#시간 재기
-start_time = time.time()
-
 #데이터를 입력 받음. space로 구분
 #입력 예시 (예1) H E L L O  (예2) 10 23 4 9 012 3
 st = input("Input : ")
+
+#시간 재기
+start_time = time.time()
 
 #입력 받은 string을 array로 바꿈
 s = strToArr.strToArr(st)

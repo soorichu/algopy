@@ -28,9 +28,10 @@ def InsertSort(A, n):
 		while loc>=0 and newItem < A[loc]:
 			A[loc+1] = A[loc]
 			loc -= 1
-		A[loc+1] = newItem
-		count += 1
-		printArr.printArr(A, count)
+		if A[loc+1]!=newItem:
+			A[loc+1] = newItem
+			count += 1
+			printArr.printArr(A, count)
 
 #################################################
 

@@ -19,13 +19,13 @@ s = strToArr.strToArr(st)
 
 #버블정렬(중요)###################################
 def BubbleSort(A, n):
-	count = 0; sort = True;
+	count = 0; flag = True;
 	for last in range(n-1, 0, -1):
 		for i in range(0, last):
 			if A[i] > A[i+1]:
 				A[i], A[i+1] = A[i+1], A[i]
-				sort = False
-		if sort: break
+				flag = False
+		if flag: break
 		count += 1
 		printArr.printArr(A, count)
 

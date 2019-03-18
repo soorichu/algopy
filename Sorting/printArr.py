@@ -4,3 +4,9 @@ def printArr(s, n):
 	for i in s:
 		print(i, end=" ")
 	print()
+
+def printArr(s):
+	print("Output :", end=" ")
+	for i in s:
+		print(i, end=" ")
+	print()

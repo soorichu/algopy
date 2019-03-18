@@ -17,14 +17,37 @@ st = input("Input : ")
 s = strToArr.strToArr(st)
 
 #합병 정렬(중요)###################################
-n = len(s)
-MergeSort(s, n):
-	if n > 1:
-		Mid = int(n/2)
-		t[:Mid] = MergeSort(A[:Mid], Mid)
-		u[:n-Mid] = MergeSort(A[Mid:n], n-Mid)
-		s[:n] = Merge(t[:Mid], s[:n-Mid-1], Mid, n-Mid)
-	return s
+def Merge(A, p, q, r):
+	i = q-1; j = q; t = 0; temp = [range(len(A))]
+	count = 0
+	while i < q and j < r:
+		if A[i] < A[j]:
+			temp[t] = A[i]; t+=1; i+=1;
+		else: 
+			temp[t] = A[j]; t+=1; j+=1;
+	
+	while i < q:
+		temp[t] = A[i]; t+=1; i+=1;
+	
+	while j < r:
+		temp[t] = A[j]; t+=1; j+=1;
+
+	i = p-1; t = 0;
+	while i < r:
+		A[i] = temp[t]; t+=1; i+=1;
+
+	count += 1
+	printArr.printArr(A, count)
+
+def MergeSort(A, p, r):
+	if p < r:
+		q = int((p+r)/2)
+		MergeSort(A, p, q)
+		MergeSort(A, q+1, r)
+		Merge(A, p, q, r)
 #################################################
+
+MergeSort(s, 0, len(s))
+
 #시간 출력
 print("total time :", time.time()-start_time, "millisec")
