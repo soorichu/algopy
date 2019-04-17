@@ -4,28 +4,31 @@
 
 def Partition(A, n):
 	Left = 1; Right = n-1;
-	#Left는 pivot보다 큰 값을 찾는다.
-	while Left<n and A[Left]<A[0]: Left += 1
-	#Right는 pivot보다 작은 값을 찾는다.
-	while Right>0 and A[Right]>=A[0]: Right -= 1
-	if Left < Right: 
-		A[Left], A[Right] = A[Right], A[Left]
-	else:
-		A[0], A[Right] = A[Right], A[0]
+
+	while Left < Right:
+		#Left는 pivot보다 큰 값을 찾는다.
+		while Left<n and A[Left]<A[0]: Left += 1
+		#Right는 pivot보다 작은 값을 찾는다.
+		while Right>0 and A[Right]>=A[0]: Right -= 1
+		if Left < Right: 
+			A[Left], A[Right] = A[Right], A[Left]
+			print("Left<->Right", A)
+		else:
+			A[0], A[Right] = A[Right], A[0]
+			print("pivot<->Right", A)
 
 	return Right
 
 def QuickSort(A, n):
 	if n > 1:
-		print(0, A, end="=>")
 		pivot = Partition(A, n)
-		print(1, A)
-		QuickSort(A[:pivot], pivot)
-		print(2, A)
-		QuickSort(A[pivot+1:], n-pivot-1)
-		print(3, A)
-		
+		print("pivot", pivot)
+		A[:pivot] = QuickSort(A[:pivot], pivot)
+		A[pivot+1:] = QuickSort(A[pivot+1:], n-pivot-1)
+		print("Quicking", A)
+	return A
+
 
 A = [30, 45, 20, 15, 40, 25, 35, 10]
-QuickSort(A, len(A))
+A = QuickSort(A, len(A))
 print(A)
