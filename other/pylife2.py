@@ -31,9 +31,10 @@ def life2(a, n):
     for i in range(1, len(a)-1):
       for j in range(1, len(a)-1):
         around = sum(a[i-1][j-1:j+2])+sum(a[i][j-1:j+2])+sum(a[i+1][j-1:j+2])
-        if (around == 3) or (around == 4 and a[i][j] == 1): next[i][j] = 1
+        if (around == 3) or (around -a[i][j] == 3): next[i][j] = 1
         else: next[i][j] = 0
     print(">> After %d" %(_+1))
     printA(next, len(next)-2)
+    a = next
 
 life2(now, 5)
