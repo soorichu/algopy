@@ -1,8 +1,13 @@
-a = [1, 2, 3, 4, 3, 4, 5, "", 3, 4, "", 2, 1]
+A1 = []
 
-del(a[3])
+for n in range(10):
+	A1.append(2*n-1)
 
-a.remove("")
+print(A1)
+print(A1[3])
 
 
-print(a)
+def A2(n):
+	return 2*n-1
+
+print(A2(3))
