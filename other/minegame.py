@@ -26,7 +26,7 @@ for i in range(m):
 	line = ''
 	for j in range(n):
 		if mine[i][j]=='*':
-			line+='* '
+			line+='*'
 		else:
 			s=0
 			for k in range(8):
@@ -34,7 +34,7 @@ for i in range(m):
 				if 0<=ti<m and 0<=tj<n:
 					if mine[ti][tj]=='*':
 						s += 1
-			line+=str(s)+' '
+			line+=str(s)
 	result.append(line+'\n')
 
 #-----결과출력-----------------------
