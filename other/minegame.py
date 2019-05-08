@@ -15,7 +15,7 @@ print(d)
 #------input 데이터------------------
 mine = []
 for f in fin.readlines():
-	mine.append(f.split())
+	mine.append(list(f))
 
 print(mine)
 m, n = len(mine), len(mine[0])
