@@ -24,7 +24,7 @@ def walk(ysize, xsize, y, x):
 			print("%3d" % a[y][x], end='')
 		print('')
 	print('steps:', step)
-	return
+
 
 dx = [1, 1, 0, -1, -1, -1, 0, 1]
 dy = [0, 1, 1, 1, 0, -1, -1, -1]
