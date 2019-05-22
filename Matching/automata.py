@@ -11,6 +11,7 @@ def automata(A, P):
 			q += 1
 
 
+S = "ABCD"
 A = "AABAACAADAABAAABAA"
 P = "AABA"
 
