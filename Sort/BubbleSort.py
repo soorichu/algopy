@@ -6,20 +6,19 @@
 
 def BubbleSort(A, n):
 	print(A)
-	count = 0; flag = True;
+	flag = True;
 	for last in range(n-1, 0, -1):
+		print(A)
 		for i in range(0, last):
 			if A[i] > A[i+1]:
 				A[i], A[i+1] = A[i+1], A[i]
 				print("{0}{1}  {2}".format(" "*(3*i+1), A[i], A[i+1]))
 				flag = False
 		if flag: break
-		count += 1
 	return A 
 
-#################################################
-
-A = [6, 2, 7, 1, 9, 3, 5, 4]
-print(BubbleSort(A, len(A)))
+if __name__=="__main__":
+	A = [6, 2, 7, 1, 9, 3, 5, 4]
+	print(BubbleSort(A, len(A)))
 
 

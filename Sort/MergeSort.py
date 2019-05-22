@@ -51,3 +51,4 @@ MergeSort(s, 0, len(s))
 
 #시간 출력
 print("total time :", time.time()-start_time, "millisec")
+

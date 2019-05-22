@@ -3,7 +3,6 @@
 #총비교횟수 n(n-1)/2, 시간복잡도 O(n^2)
 #불안정 정렬, 제자리 정렬
 
-
 def SelectionSort(A, n):
 	count = 0
 	print(A)
@@ -19,5 +18,6 @@ def SelectionSort(A, n):
 		count += 1
 	return A
 
-A = [6, 2, 7, 1, 9, 3, 5, 4]
-print(SelectionSort(A, len(A)))
+if __name__=="__main__":
+	A = [6, 2, 7, 1, 9, 3, 5, 4]
+	print(SelectionSort(A, len(A)))

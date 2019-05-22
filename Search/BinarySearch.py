@@ -27,7 +27,8 @@ def BinarySearchIteration(A, n, x):
 		else: Left = Mid + 1
 
 	return -1
-
-A = [i*10 for i in range(10)]
-print(BinarySearch(A, 0, len(A)-1, 40))
-print(BinarySearchIteration(A, len(A), 40))
+	
+if __name__=="__main__":
+	A = [i*10 for i in range(10)]
+	print(BinarySearch(A, 0, len(A)-1, 40))
+	print(BinarySearchIteration(A, len(A), 40))

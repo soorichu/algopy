@@ -28,6 +28,7 @@ def CountingSort(A, n):
 
 	return B
 
-A = [6, 5, 7, 1, 9, 3, 5, 4]
-print(CountingSort(A, len(A)))
+if __name__=="__main__":
+	A = [6, 5, 7, 1, 9, 3, 5, 4]
+	print(CountingSort(A, len(A)))
 

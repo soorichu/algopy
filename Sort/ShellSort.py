@@ -5,24 +5,26 @@
 #간격의 크기 D를 계산하는 방식에 따라 성능이 달라진다. D의 가장 좋은 간격은 미해결 과제
 #불안정 정렬, 제자리 정렬
 
+from InsertSort import InsertSort
 
-def MakeSub(s, first, last, term):
+def MakeSub(A, f, l, t):
 	res = []
-	for i in range(first, last, term):
-		res.append(s[i])
+	for i in range(f, l, t):
+		res.append(A[i])
 	return res
 
-count = 0
-A = [6, 2, 7, 1, 9, 3, 5, 4]
-D = int(len(A)/2)
-while D > 0:
-	for i in range(0, D):
-		sub = MakeSub(A, i, len(A), D) #부분배열 만들기
-		for j in range(1, len(sub)):  #부분배열을 삽입정렬
-			for k in range(j, 0, -1):
-				if sub[k-1] > sub[k]:
-					A[(k-1)*D+i], A[k*D+i] = A[k*D+i], A[(k-1)*D+i]
-					count += 1
-					print(A)
-				else: break
-	D = int(D/2)
+def ShellSort(A, n):
+	D = int(n/2)
+	print(A)
+	while D > 0:
+		for i in range(0, D):
+			val = i
+			for s in InsertSort(MakeSub(A, i, n, D), int(n/D)):
+				A[val] = s; val+=D
+
+		D = int(D/2)
+
+
+if __name__=="__main__":
+	A = [6, 2, 7, 1, 9, 3, 5, 4]
+	ShellSort(A, len(A))

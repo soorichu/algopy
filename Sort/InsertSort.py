@@ -9,7 +9,6 @@
 
 def InsertSort(A, n):
 	print(A)
-	count = 0
 	for i in range(1, n):
 		loc = i-1;  newItem = A[i];
 		while loc>=0 and newItem < A[loc]:
@@ -18,9 +17,9 @@ def InsertSort(A, n):
 			loc -= 1
 		if A[loc+1]!=newItem:
 			A[loc+1] = newItem
-			count += 1
 		print(A)
 	return A
 
-A = [6, 2, 7, 1, 9, 3, 5, 4]
-print(InsertSort(A, len(A)))
+if __name__=="__main__":
+	A = [6, 2, 7, 1, 9, 3, 5, 4]
+	print(InsertSort(A, len(A)))

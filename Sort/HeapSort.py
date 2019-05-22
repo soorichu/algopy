@@ -42,6 +42,6 @@ def HeapSort(A, n):
 
 	return A
 
-
-A = [6, 2, 7, 1, 9, 3, 5, 4]
-print(HeapSort(A, len(A)))
+if __name__=="__main__":
+	A = [6, 2, 7, 1, 9, 3, 5, 4]
+	print(HeapSort(A, len(A)))

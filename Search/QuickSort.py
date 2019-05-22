@@ -28,7 +28,7 @@ def QuickSort(A, n):
 		print("Quicking", A)
 	return A
 
-
-A = [30, 45, 20, 15, 40, 25, 35, 10]
-A = QuickSort(A, len(A))
-print(A)
+if __name__=="__main__":
+	A = [30, 45, 20, 15, 40, 25, 35, 10]
+	A = QuickSort(A, len(A))
+	print(A)

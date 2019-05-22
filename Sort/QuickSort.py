@@ -25,6 +25,6 @@ def QuickSort(A, n):
 		QuickSort(A[pivot+1:], n-pivot-1)
 		print(3, A)
 		
-
-A = [30, 45, 20, 15, 40, 25, 35, 10]
-QuickSort(A, len(A))
+if __name__=="__main__":
+	A = [30, 45, 20, 15, 40, 25, 35, 10]
+	QuickSort(A, len(A))

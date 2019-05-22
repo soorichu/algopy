@@ -1,3 +1,7 @@
+#라빈-카프 알고리즘
+#문자열의 비교를 수치의 비교로 전환해 문자열을 매칭하는 방법
+#수행시간 O(n)
+
 def list2int(arr):
 	res = 0; n = len(arr)
 	for i in range(n):
@@ -14,8 +18,7 @@ def rabinKarp(A, P, d):
 				print(' ', end="") 
 			print(P)
 
-
-A = "AABAACAADAABAAABAA"
-P = "AABA"
-
-rabinKarp(A, P, len(P))
+if __name__=="__main__":
+	A = "AABAACAADAABAAABAA"
+	P = "AABA"
+	rabinKarp(A, P, len(P))
