@@ -11,7 +11,7 @@ def BubbleSort(A, n):
 		for i in range(0, last):
 			if A[i] > A[i+1]:
 				A[i], A[i+1] = A[i+1], A[i]
-				print("{0}{1}  {2}".format(" "*(4*i+1), A[i], A[i+1]))
+				print("{0}{1}  {2}".format(" "*(3*i+1), A[i], A[i+1]))
 				flag = False
 		if flag: break
 		count += 1
@@ -19,7 +19,7 @@ def BubbleSort(A, n):
 
 #################################################
 
-A = [60, 20, 70, 10, 80, 30, 50, 40]
+A = [6, 2, 7, 1, 9, 3, 5, 4]
 print(BubbleSort(A, len(A)))
 
 

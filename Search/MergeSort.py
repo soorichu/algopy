@@ -1,5 +1,3 @@
-A = [50, 30, 7, 100, 40, 88, 15, 44, 55]
-
 def MergeSort(A, n):
   if n>1:
     Mid = int(n/2)
@@ -24,6 +22,8 @@ def Merge(B, C, n, m):
   for k in range(i, n): A.append(B[k])
   for l in range(j, m): A.append(C[l])
   return A
+
+A = [6, 5, 7, 1, 9, 3, 5, 4]
 
 print(">> START :", A)
 print(">> RESULT :", MergeSort(A, len(A)))

@@ -5,10 +5,12 @@
 # "각 노드의 값은 자기 자식의 값보다 작다."
 #힙정렬은 주어진 배열을 힙으로 만든 후 힙에서 가장 작은 값을 차례로 하나씩 제거하면서 힙의 크기를 줄여 나간다. 
 #나중에 힙에 아무런 원소도 남지 않으면 힙 정렬이 끝난다. 
-#힙정렬의 수행시간은 O(nlogn)이다. 
+#시간복잡도는 O(nlogn)이다. 
+#불안정적 정렬, 제자리 정렬
 
 #초기 최대힙 생성
 def BuildHeap(A, n):
+	print("초기힙 생성")
 	for i in range(n):
 		temp = i
 		print(i, A[:i+1], end="->")
@@ -24,8 +26,9 @@ def HeapSort(A, n):
 	print(A)
 	A = BuildHeap(A, n)
 	print(A)
+	print("힙 정렬")
 	for i in range(n-1, 0, -1):
-		A[0], A[i] = A[i], A[0]
+		A[0], A[i] = A[i], A[0]  #불안정적
 		print(i, A[:i+1], end="->")
 		p = 0; l = 1; r = 2
 		while l<i:
@@ -40,5 +43,5 @@ def HeapSort(A, n):
 	return A
 
 
-A = [60, 20, 70, 10, 80, 30, 50, 40]
+A = [6, 2, 7, 1, 9, 3, 5, 4]
 print(HeapSort(A, len(A)))
